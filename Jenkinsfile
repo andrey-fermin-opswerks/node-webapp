@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t $node_BUILD_NUMBER .'
-                sh 'docker run $node_BUILD_NUMBER'
+                sh 'docker build -t node_$BUILD_NUMBER .'
+                sh 'docker run node_$BUILD_NUMBER'
               
             }
         }
